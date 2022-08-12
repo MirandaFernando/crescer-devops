@@ -1,0 +1,27 @@
+name: Hello World
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: ["master"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: compilação
+    runs-on: ubuntu-latest
+    
+    
+    steps:
+      - name: Git Checkout
+        uses: actions/checkout@v3
+      - name: Configurar o JDK 11
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'temurim'
+          cache: moven
+      - name: compilação
+        run: mvn -B compila --file pom.xml  
+      
