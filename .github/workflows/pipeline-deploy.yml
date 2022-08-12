@@ -21,7 +21,7 @@ jobs:
         with:
           java-version: '11'
           distribution: 'temurim'
-          cache: moven
+          cache: maven
       - name: compilação
         run: mvn -B compile --file pom.xml  
       
