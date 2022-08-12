@@ -23,5 +23,5 @@ jobs:
           distribution: 'temurim'
           cache: moven
       - name: compilação
-        run: mvn -B compila --file pom.xml  
+        run: mvn -B compile --file pom.xml  
       
