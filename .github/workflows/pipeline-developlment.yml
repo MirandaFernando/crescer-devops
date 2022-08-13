@@ -75,4 +75,4 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: registry.heroku.com/lab-devops-project/web:latest
+        tags: registry.heroku.com/devops-aula/web:latest
