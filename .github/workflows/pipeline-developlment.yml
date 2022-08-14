@@ -40,7 +40,7 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
   tests:
     name: Testes automatizados
-    needs: build
+    needs: code-quality
     runs-on: ubuntu-latest    
 
     steps:
@@ -57,7 +57,7 @@ jobs:
   
   push-image:
     name: Enviar imagem Heroku
-    needs: [ tests ]
+    needs: [ code-quality, tests ]
     runs-on: ubuntu-latest
     
     steps:
